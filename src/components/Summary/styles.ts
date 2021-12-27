@@ -22,7 +22,7 @@ export const Container = styled.div`
     strong{
         display: block;
         font-size: 2rem;
-        font-family: 500;
+        font-weight: 500;
         margin-top: 1rem;
         line-height: 3rem;
     }
