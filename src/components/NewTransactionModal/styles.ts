@@ -1,5 +1,16 @@
 import styled from 'styled-components';
-import {darken} from 'polished'
+import {darken,transparentize} from 'polished';
+
+interface ButtonBoxProps{
+    isActive:boolean;
+    activeColor: 'green' | 'red';
+}
+
+
+const colors =  {
+    green: '#33CC95',
+    red: '#e52e4d'
+}
 
 export const Container = styled.form`
    
@@ -58,13 +69,20 @@ export const TransactionTypeContainer = styled.div`
     gap: 0.5rem;
     background: #E7E9EE;
 
-    button{
+    
+`;
+export const ButtonBox = styled.button<ButtonBoxProps>`
+
         height: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #d7d7d7;
         border-radius: 0.25rem;
+
+        background: ${props => props.isActive ? 
+        transparentize(0.9 ,colors[props.activeColor]) : 
+        'transparent' };
         
         font-size: 1rem;
         transition: border-color 0.2s;
@@ -84,6 +102,5 @@ export const TransactionTypeContainer = styled.div`
             width: 20px;
             height: 20px;
         }
-
-    }
+    
 `;
