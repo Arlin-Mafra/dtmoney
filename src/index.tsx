@@ -13,10 +13,18 @@ createServer({
         {
           id: 1,
           title: "teste",
-          value: 6000,
+          amount: 6000,
           category: "dev",
           type: "deposit",
           date: "2022-05-01 11:00:00",
+        },
+        {
+          id: 2,
+          title: "teste",
+          amount: 200,
+          category: "compras",
+          type: "withdrow",
+          date: "2022-05-10 13:00:00",
         },
       ],
     });
